@@ -7,8 +7,6 @@ I used the revealing module pattern, so it's as simple as...
 
 ```javascript 
 
-
-
 Domain = (function(){
 	
 	var url = function(){
@@ -27,14 +25,11 @@ Domain = (function(){
 
 
 
-
 Domain.url();
 
 Domain.protocol();
 
 Domain.and-so-on-and-so-forth
-
-
 
 
 
