@@ -3,27 +3,71 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Domain Me!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Domain Me!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <style>
-        	body{
-        		background: #999;
-        	}
-        </style>
-    </head>
-    <body>
-	
-	Let's do some domain shizzle.
+    <style>
+        body{
+            max-width: 750px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lets get all Domain up in here</h1>
+
+<p>To do...</p>
+<ul>
+    <li>Snippets for each method</li>
+    <li>A copy and past line of code to test on your page or in the console</li>
+</ul>
+
+<h2>Methods:</h2>
+<p>URL: <span id='url'></p>
+
+<p>Protocol: <span id='protocol'></p>
+
+<p>Host: <span id='host'></p>
+
+<p>Subdomain: <span id='subdomain'></p>
+
+<p>Host Name: <span id='hostName'></p>
+
+<p>Top Level Domain: <span id='topLevelDomain'></p>
+
+<p>Pathname: <span id='pathNam'></p>
 
 
-	<script src="js/domain.js"></script>
 
-    </body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/domain.js"></script>
+
+<script>
+
+    var url = Domain.url();
+    var protocol = Domain.protocol();
+    var subdomain = Domain.subdomain();
+    var hostName = Domain.hostName();
+    var topLevelDomain = Domain.topLevelDomain();
+    var pathName = Domain.pathName();
+
+    $('#url').html(url);
+    $('#protocol').html(protocol);
+    $('#subdomain').html(subdomain);
+    $('#hostName').html(hostName);
+    $('#topLevelDomain').html(topLevelDomain);
+    $('#pathName').html(pathName);
+
+
+</script>
+
+
+</body>
 </html>
