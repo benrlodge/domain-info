@@ -43,7 +43,8 @@ Domain = (function(){
     };
 
     var subdomain = function(){
-        return sub[0];
+        var s = sub();
+        return s[0];
     };
 
     return {

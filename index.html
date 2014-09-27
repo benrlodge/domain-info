@@ -88,7 +88,7 @@
 </article>
 
 <article>
-    <p class="method">Pathname: <span class="output" id='pathNam'></p>
+    <p class="method">Pathname: <span class="output" id='pathName'></p>
     <pre> var url = Domain.pathName(); </pre>
 </article>
 </section>
@@ -105,12 +105,14 @@
     var protocol = Domain.protocol();
     var subdomain = Domain.subdomain();
     var hostName = Domain.hostName();
+    var host = Domain.host();
     var topLevelDomain = Domain.topLevelDomain();
     var pathName = Domain.pathName();
 
     $('#url').html(url);
     $('#protocol').html(protocol);
     $('#subdomain').html(subdomain);
+    $('#host').html(host);
     $('#hostName').html(hostName);
     $('#topLevelDomain').html(topLevelDomain);
     $('#pathName').html(pathName);
