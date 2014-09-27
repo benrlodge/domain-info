@@ -6,48 +6,57 @@ See more at benrlodge.com
 
 Domain = (function(){
 
-    var url = function(){
+    // for testing
+    var u = 'http://www.benrlodge.com/myplugin/mywork/';
+
+    // Domain specific components
+    function url(){
         return document.URL; //e.g. http://www.example.org:8888/foo/bar?q=baz#bangbang
-    };
+    }
 
-    var protocol = function(){
+    function protocol(){
         return window.location.protocol; // e.g. http:
-    };
+    }
 
-    var host = function(){
+    function host(){
         return window.location.host;  // include port number if specified e.g. example.org:8888
-    };
+    }
 
-    var hostName = function(){
+    function hostName(){
         return window.location.hostname; // eg. example.org
-    };
+    }
 
-    var pathName = function(){
+    function pathName(){
         return window.location.pathname; // eg. /foo/bar
-    };
+    }
 
-    var parts = function(){
+    function parts(){
         return (url()).split("//");
-    };
+    }
 
-    var sub = function(){
+    function sub(){
         var p = parts();
         if (!p){ return false; }
         return p[1].split('.');
-    };
+    }
 
-    var topLevelDomain = function(){
+    function topLevelDomain(){
         var s = sub();
         if(!s[2]){ return false; }
         return s[2].split('/')[0]; // top level domain
-    };
+    }
 
-    var subdomain = function(){
-        var s = sub();
-        return s[0];
-    };
+    function subdomain(){
+        return (sub())[0];
+    }
+
+    // Find string anywhere in url
+    function contains(query){
+        return (url()).indexOf(query) > 0 ? true : false;
+    }
 
     return {
+        contains: contains,
         url: url,
         protocol: protocol,
         host: host,
