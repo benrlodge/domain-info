@@ -16,6 +16,7 @@
         body{
             max-width: 750px;
             margin: 0 auto;
+            padding: 20px 10px 50px 10px;
         }
         pre{
             border: 1px solid #999;
@@ -96,10 +97,15 @@
 </pre>
 </article>
 
-
 <article>
     <p class="method">Pathname: <span class="output" id='pathName'></p>
     <pre> var url = Domain.pathName(); </pre>
+</article>
+</section>
+
+<article>
+    <p class="method">Contains:  <span class="output" id=''>true</p>
+    <pre> var contains = Domain.contains('github'); // Search for a string within the domain url </pre>
 </article>
 </section>
 
@@ -126,7 +132,6 @@
     $('#hostName').html(hostName);
     $('#topLevelDomain').html(topLevelDomain);
     $('#pathName').html(pathName);
-
 
 </script>
 

@@ -7,23 +7,25 @@ Ever need to split up a url to get some info? Say the subdomain, or the top leve
 It's as simple as...
 
 ```javascript
+<script src='domain.js'></script>
+
 <script>
 
-Domain.url(); // http://benrlodge.github.io/domain-info/
+    Domain.url(); // http://benrlodge.github.io/domain-info/
 
-Domain.protocol(); // http:
+    Domain.protocol(); // http:
 
-Domain.subdomain(); // benrlodge
+    Domain.subdomain(); // benrlodge
 
-Domain.hostName(); // benrlodge.github.io
+    Domain.hostName(); // benrlodge.github.io
 
-Domain.host(); // benrlodge.github.io, includes port number if specified e.g. github.io:8888
+    Domain.host(); // benrlodge.github.io, includes port number if specified e.g. github.io:8888
 
-Domain.topLevelDomain(); // .io
+    Domain.topLevelDomain(); // .io
 
-Domain.pathName(); /plugins/domain-info/
+    Domain.pathName(); // /plugins/domain-info/
 
-Domain.contains('ben'); // true
+    Domain.contains('ben'); // true
 
 
 </script>
