@@ -4,10 +4,11 @@ By Ben Lodge
 See more at benrlodge.com
  */
 
-Domain = (function(){
+function helloWorld(){
+    return 'Hello world!';
+}
 
-    // for testing
-    var u = 'http://www.benrlodge.com/myplugin/mywork/';
+Domain = (function(){
 
     // Domain specific components
     function url(){
