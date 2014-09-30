@@ -56,9 +56,15 @@ Domain = (function(){
         return (url()).indexOf(query) > 0 ? true : false;
     }
 
+    function matches(query){
+        return query == url();
+    }
+
     return {
         contains: contains,
+        matches: matches,
         url: url,
+        parts: parts,
         protocol: protocol,
         host: host,
         subdomain: subdomain,

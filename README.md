@@ -27,6 +27,8 @@ It's as simple as...
 
     Domain.contains('ben'); // true
 
+    Domain.matches('http://benrlodge.github.io/domain-info/') // true
+
 
 </script>
 ```
