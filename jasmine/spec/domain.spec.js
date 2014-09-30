@@ -1,18 +1,26 @@
-// http://angular-tips.com/blog/2014/03/introduction-to-unit-test-spies/
 
+describe('Domain', function () {
 
-describe("The Domain constructor", function() {
- 
   beforeEach(function () {
-    spyOn(Domain.prototype, 'getUrl');
-    var d = new Domain();
   });
 
-
-  it("should call its prototype's getURL", function() {
-    expect(Domain.prototype.getUrl).toHaveBeenCalled();
+  it('url should equal current url', function () {
+    var dUrl = Domain.url()
+    var currentUrl = 'http://localhost:8888/plugins/domain-info/jasmine/SpecRunner.html'
+    expect(dUrl).toEqual(currentUrl);
   });
 
+  it('protocol should equal http:', function () {
+    var dProtocol = Domain.protocol()
+    var currentProtocol = 'http:'
+    expect(dProtocol).toEqual(currentProtocol);
+  });
+
+  it('host should equal localhost:8888', function () {
+    var dHost = Domain.host()
+    var currentHost = 'localhost:8888'
+    expect(dHost).toEqual(currentHost);
+  });
 
 
 
